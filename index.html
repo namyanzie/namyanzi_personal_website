@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary meta -->
+  <title>Namyanzi Edwards · Financial Engineering &amp; Operations Research @ Columbia</title>
+  <meta name="description" content="Namyanzi Edwards: Columbia Financial Engineering & Operations Research student (Minor in AI). Software engineering at Amazon, computational research, and co-founder of GAAP. Seeking quant trading, quant research, and SWE internships.">
+  <meta name="author" content="Namyanzi Edwards">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAFAF8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121314" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph / social preview. TODO: replace [SITE_URL] with your live URL, e.g. https://username.github.io -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Namyanzi Edwards · Financial Engineering & Operations Research @ Columbia">
+  <meta property="og:description" content="Math, markets, and building systems. Amazon SDE intern, Gates Scholar, co-founder of GAAP.">
+  <meta property="og:url" content="[SITE_URL]/">
+  <meta property="og:image" content="[SITE_URL]/assets/photo.jpg">
+  <meta property="og:image:alt" content="Portrait of Namyanzi Edwards">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Suppress the default /favicon.ico request -->
+  <link rel="icon" href="data:,">
+
+  <!-- Fonts: IBM Plex Sans (body) and IBM Plex Mono (details). System fonts are used if these fail to load. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flag that JS is available so image fade-in and the mobile menu only apply when they can work -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">Namyanzi Edwards</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#fellowships">Fellowships</a></li>
+        <li><a href="#gaap">GAAP</a></li>
+        <li><a href="#campus">Campus</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="container">
+        <div class="hero__id">
+          <!-- TODO: replace with real photo (square, at least 400x400) -->
+          <div class="ph ph--avatar" data-label="HEADSHOT">
+            <img src="assets/photo.jpg" alt="Portrait of Namyanzi Edwards" width="400" height="400" fetchpriority="high" decoding="async">
+          </div>
+          <div>
+            <h1>Namyanzi Edwards</h1>
+            <p class="hero__headline">Financial Engineering &amp; Operations Research @ Columbia · Minor in AI</p>
+          </div>
+        </div>
+
+        <p class="hero__intro">
+          I study the mathematics behind markets and decisions at Columbia: probability, linear algebra, and optimization.
+          I build systems that turn data into decisions, most recently a CloudWatch metrics layer at Amazon that brought API scaling from O(n) to O(1).
+        </p>
+        <p class="hero__status">Seeking quant trading, quant research, and software engineering internships · New York, NY</p>
+
+        <!-- At-a-glance facts for a 30-second scan -->
+        <dl class="glance">
+          <div><dt>Studying</dt><dd>Columbia FE&amp;OR, Class of 2029</dd></div>
+          <div><dt>Recent</dt><dd>Amazon SDE Intern, Summer 2026</dd></div>
+          <div><dt>Honors</dt><dd>Gates Scholar · NCWIT National Winner</dd></div>
+          <div><dt>Built</dt><dd>GAAP: 400+ scholars, 35+ countries</dd></div>
+        </dl>
+
+        <ul class="actions">
+          <!-- TODO: [RESUME_PDF_URL] e.g. a hosted PDF link, or add a phone-free copy at assets/Edwards_Namyanzi_Resume.pdf -->
+          <li><a class="btn btn--primary" href="[RESUME_PDF_URL]">Resume (PDF)</a></li>
+          <li><a class="btn" href="[GITHUB_URL]">GitHub</a></li>
+          <li><a class="btn" href="[LINKEDIN_URL]">LinkedIn</a></li>
+          <li><a class="btn" href="mailto:nse2119@columbia.edu">Email</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ 01 EXPERIENCE ============================ -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 class="section-title" id="experience-title"><span class="num">01</span> Experience</h2>
+
+        <article class="entry">
+          <header class="entry__head">
+            <h3 class="entry__title">Amazon <span class="entry__role">Software Development Intern</span></h3>
+            <p class="entry__meta">Summer 2026 · Seattle, WA</p>
+          </header>
+          <ul class="bullets">
+            <li>Replaced an O(n) CloudWatch query pattern, which degraded by ~1200 ms per 2 stream groups, with an integration layer that scales O(1) in API calls while computing 7-day rolling utilization averages per stream group.</li>
+            <li>Built a real-time AWS GameLift Streams dashboard that tracks CloudWatch metrics across stream groups and flags overprovisioned resources to cut idle capacity costs.</li>
+          </ul>
+          <ul class="tags" aria-label="Technologies">
+            <li>AWS</li><li>CloudWatch</li><li>GameLift Streams</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <header class="entry__head">
+            <h3 class="entry__title">The Jackson Laboratory <span class="entry__role">Computational Neuroscience Research Intern</span></h3>
+            <p class="entry__meta">May–Aug 2025 · Bar Harbor, ME</p>
+          </header>
+          <ul class="bullets">
+            <li>Classified four mouse behaviors (grooming, rearing, walking, running) during open field exploration using Python and machine learning, supporting O'Connell Lab research on cognitive decline.</li>
+            <li>Selected as 1 of 30 students nationwide (2% acceptance).</li>
+          </ul>
+          <a class="more-link" href="#research-jax">Research write-up →</a>
+        </article>
+
+        <article class="entry">
+          <header class="entry__head">
+            <h3 class="entry__title">International Girls' Ambition and Achievement Program (GAAP) <span class="entry__role">Co-Founder</span></h3>
+            <p class="entry__meta">May 2024–Present · Remote</p>
+          </header>
+          <ul class="bullets">
+            <li>Scaled a global career-development program to 400+ registered scholars across 35+ countries and secured 10+ nonprofit partnerships.</li>
+          </ul>
+          <a class="more-link" href="#gaap">About GAAP →</a>
+        </article>
+
+        <article class="entry">
+          <header class="entry__head">
+            <h3 class="entry__title">Huntsman Cancer Institute <span class="entry__role">Leukemia and Lymphoma Research Intern</span></h3>
+            <p class="entry__meta">May–Aug 2024 · Salt Lake City, UT</p>
+          </header>
+          <ul class="bullets">
+            <li>Presented novel findings on the F-box protein FBXO25 (E3 ligase complex) in hematopoietic malignancies, using tissue culture, cloning, western blot, immunoprecipitation, and flow cytometry in the Buckley Lab.</li>
+          </ul>
+          <a class="more-link" href="#research-huntsman">Research write-up →</a>
+        </article>
+
+        <article class="entry">
+          <header class="entry__head">
+            <h3 class="entry__title">ZillaGigs <span class="entry__role">Product Development Intern</span></h3>
+            <p class="entry__meta">Sep 2021–Feb 2022 · Hartford, CT</p>
+          </header>
+          <ul class="bullets">
+            <li>Built and tested UI/UX and financial literacy features for a teen-entrepreneur finance app as a Camp Erio fellow.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================ 02 PROJECTS ============================ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title" id="projects-title"><span class="num">02</span> Projects</h2>
+
+        <div class="cards">
+          <article class="card">
+            <p class="card__eyebrow">2026 · Team of 5 · Hackathon winner</p>
+            <h3 class="card__title">Locked[IN] <span class="card__sub">LinkedIn career-discovery feature</span></h3>
+            <dl class="facts">
+              <dt>Problem</dt>
+              <dd>Turning the gap between a user's skills and a target role into a concrete, personalized plan.</dd>
+              <dt>Approach</dt>
+              <dd>Owned the "Build my path" module: a Flask service that uses the Claude API to convert a user's skill gaps into a milestone plan of courses, certifications, and local opportunities. It runs on the team's shared skills-overlap fit model across a Next.js/TypeScript + FastAPI stack, using synthetic data (2,000 users, 1,000 jobs, 600 courses).</dd>
+              <dt>Result</dt>
+              <dd>Won the 2026 LinkedIn Possibilities in Tech Hackathon.</dd>
+            </dl>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>Flask</li><li>Claude API</li><li>FastAPI</li><li>Next.js</li><li>TypeScript</li>
+            </ul>
+            <a class="card__link" href="[LOCKEDIN_REPO_URL]">Code on GitHub →</a>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">Summer 2026 · Amazon Future Engineer Hackathon</p>
+            <h3 class="card__title">AngelAI <span class="card__sub">Socratic AI coaching tool</span></h3>
+            <dl class="facts">
+              <dt>Problem</dt>
+              <dd>Giving interns a way to practice defending their technical decisions and get structured feedback.</dd>
+              <dt>Approach</dt>
+              <dd>Co-built a coaching tool where interns defend technical decisions to an AI reviewer that classifies each answer as gap, weak, or strong and awards Leadership Principle badges for sound reasoning.</dd>
+              <dt>Result</dt>
+              <dd>Top 10 of 50 teams.</dd>
+            </dl>
+            <ul class="tags" aria-label="Tech stack">
+              <li>React</li><li>TypeScript</li><li>Cloudscape</li><li>AWS Bedrock</li><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>CloudFront</li>
+            </ul>
+            <a class="card__link" href="[ANGELAI_REPO_URL]">Code on GitHub →</a>
+          </article>
+
+          <!--
+            Template for a new project card. Copy this block above and fill it in.
+            <article class="card">
+              <p class="card__eyebrow">[DATE] · [CONTEXT]</p>
+              <h3 class="card__title">[TITLE] <span class="card__sub">[ONE-LINE SUMMARY]</span></h3>
+              <dl class="facts">
+                <dt>Problem</dt><dd>[PROBLEM]</dd>
+                <dt>Approach</dt><dd>[ALGORITHMS, MODELS, MATH]</dd>
+                <dt>Result</dt><dd>[MEASURABLE RESULT]</dd>
+              </dl>
+              <ul class="tags" aria-label="Tech stack"><li>[TECH]</li></ul>
+              <a class="card__link" href="[REPO_URL]">Code on GitHub →</a>
+            </article>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 03 RESEARCH ============================ -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <h2 class="section-title" id="research-title"><span class="num">03</span> Research</h2>
+
+        <article class="entry" id="research-jax">
+          <header class="entry__head">
+            <h3 class="entry__title">Machine learning classification of mouse behavior <span class="entry__role">The Jackson Laboratory · O'Connell Lab</span></h3>
+            <p class="entry__meta">May–Aug 2025</p>
+          </header>
+          <dl class="facts facts--grid">
+            <dt>Question</dt>
+            <dd>Can machine learning reliably classify distinct mouse behaviors (grooming, rearing, walking, running) during open field exploration, to support research on cognitive decline?</dd>
+            <dt>Methods</dt>
+            <dd>Python and machine learning. <span class="todo">[METHODS: model, features, dataset]</span></dd>
+            <dt>Results</dt>
+            <dd><span class="todo">[RESULT]</span></dd>
+            <dt>Recognition</dt>
+            <dd>Selected as 1 of 30 students nationwide (2% acceptance).</dd>
+          </dl>
+        </article>
+
+        <article class="entry" id="research-huntsman">
+          <header class="entry__head">
+            <h3 class="entry__title">FBXO25 in hematopoietic malignancies <span class="entry__role">Huntsman Cancer Institute, University of Utah · Buckley Lab</span></h3>
+            <p class="entry__meta">May–Aug 2024</p>
+          </header>
+          <dl class="facts facts--grid">
+            <dt>Program</dt>
+            <dd>Pathmakers, a 10-week summer research program.</dd>
+            <dt>Question</dt>
+            <dd>What role does the F-box protein FBXO25, part of the E3 ligase complex in the ubiquitin proteasome system, play in hematopoietic malignancies?</dd>
+            <dt>Methods</dt>
+            <dd>Tissue culture, cloning, western blot, immunoprecipitation, and flow cytometry.</dd>
+            <dt>Results</dt>
+            <dd>Presented novel findings on FBXO25 in hematopoietic malignancies.</dd>
+          </dl>
+          <ul class="tags" aria-label="Techniques">
+            <li>Tissue culture</li><li>Cloning</li><li>Western blot</li><li>Immunoprecipitation</li><li>Flow cytometry</li>
+          </ul>
+        </article>
+
+        <article class="entry" id="research-mfc">
+          <header class="entry__head">
+            <h3 class="entry__title">Laterite soil microbial fuel cells <span class="entry__role">Independent research · Genius Olympiad &amp; research symposiums</span></h3>
+            <p class="entry__meta">Aug 2021–Present</p>
+          </header>
+          <dl class="facts facts--grid">
+            <dt>Question</dt>
+            <dd>Can laterite soil, abundant across tropical regions of South America, Africa, and Asia, be optimized in microbial fuel cells to generate electricity for local communities?</dd>
+            <dt>Methods</dt>
+            <dd>Tested synthetic soil formulations with varying iron and aluminum sulfate concentrations to maximize microbial activity and power output.</dd>
+            <dt>Results</dt>
+            <dd><span class="todo">[RESULT: voltage / power figures]</span></dd>
+            <dt>Awards</dt>
+            <dd>10+ awards, including at Genius Olympiad.</dd>
+            <dt>Next steps</dt>
+            <dd>Validate with authentic laterite samples and improve sealing for stable voltage readings.</dd>
+          </dl>
+        </article>
+
+        <!-- Research gallery: lab and science fair photos -->
+        <div class="gallery" data-gallery aria-label="Research photos">
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="RESEARCH PHOTO 1">
+              <img src="assets/research/research-1.jpg" alt="[ALT: describe research photo 1]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: research photo 1]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="RESEARCH PHOTO 2">
+              <img src="assets/research/research-2.jpg" alt="[ALT: describe research photo 2]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: research photo 2]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="RESEARCH PHOTO 3">
+              <img src="assets/research/research-3.jpg" alt="[ALT: describe research photo 3]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: research photo 3]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="RESEARCH PHOTO 4">
+              <img src="assets/research/research-4.jpg" alt="[ALT: describe research photo 4]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: research photo 4]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 04 COURSEWORK & SKILLS ============================ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section-title" id="skills-title"><span class="num">04</span> Coursework &amp; Skills</h2>
+
+        <div class="entry">
+          <header class="entry__head">
+            <h3 class="entry__title">Columbia University <span class="entry__role">B.S. Financial Engineering &amp; Operations Research · Minor in Artificial Intelligence</span></h3>
+            <p class="entry__meta">Expected May 2029</p>
+          </header>
+          <p class="muted">Frederic Robert Weekes Scholar</p>
+        </div>
+
+        <h3 class="subhead">Relevant coursework</h3>
+        <dl class="facts facts--grid">
+          <dt>Mathematics</dt>
+          <dd>Probability for Engineers · Linear Algebra · Multivariable Calculus</dd>
+          <dt>Computing &amp; AI</dt>
+          <dd>Intro to Python · AI in Context</dd>
+          <dt>Economics</dt>
+          <dd>Principles of Economics</dd>
+        </dl>
+
+        <h3 class="subhead">Languages &amp; tools</h3>
+        <dl class="facts facts--grid">
+          <dt>Languages</dt>
+          <dd><ul class="tags"><li>Python</li><li>Java</li><li>TypeScript</li></ul></dd>
+          <dt>Scientific Python</dt>
+          <dd><ul class="tags"><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul></dd>
+          <dt>Cloud</dt>
+          <dd><ul class="tags"><li>AWS CloudWatch</li><li>GameLift Streams</li><li>Bedrock</li><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>CloudFront</li></ul></dd>
+          <dt>Web &amp; APIs</dt>
+          <dd><ul class="tags"><li>Flask</li><li>FastAPI</li><li>React</li><li>Next.js</li><li>Cloudscape</li><li>Claude API</li></ul></dd>
+          <dt>Tools</dt>
+          <dd><ul class="tags"><li>Linux</li><li>Git/GitHub</li></ul></dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================ 05 FELLOWSHIPS & SCHOLARSHIPS ============================ -->
+    <section class="section" id="fellowships" aria-labelledby="fellowships-title">
+      <div class="container">
+        <h2 class="section-title" id="fellowships-title"><span class="num">05</span> Fellowships &amp; Scholarships</h2>
+
+        <div class="cards cards--grid">
+          <article class="card">
+            <p class="card__eyebrow">2025 · Top 2%</p>
+            <h3 class="card__title">Bill &amp; Melinda Gates Scholar</h3>
+            <p class="card__desc">A highly selective scholarship for outstanding, Pell-eligible students from minority backgrounds.</p>
+            <p><span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow"><span class="todo">[YEAR]</span></p>
+            <h3 class="card__title">QuestBridge Scholar</h3>
+            <p class="card__desc">A national program connecting high-achieving students from low-income backgrounds with leading colleges.</p>
+            <p><span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">Columbia University</p>
+            <h3 class="card__title">Frederic Robert Weekes Scholar</h3>
+            <p class="card__desc">A named scholarship at Columbia University.</p>
+            <p><span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">2025 · Top 5%</p>
+            <h3 class="card__title">LinkedIn Possibilities in Tech Scholar</h3>
+            <p class="card__desc">LinkedIn's program for students from underrepresented communities pursuing careers in tech, including mentorship.</p>
+            <p>Received mentorship through the program, won the 2026 Possibilities in Tech Hackathon with Locked[IN], and visited LinkedIn's NYC office in May 2026.</p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">2025 · Top 5%</p>
+            <h3 class="card__title">Amazon Future Engineer</h3>
+            <p class="card__desc">Amazon's scholarship for students pursuing computer science, which includes an internship at Amazon.</p>
+            <p>Built AngelAI at the Amazon Future Engineer Hackathon (top 10 of 50 teams). <span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">Career development</p>
+            <h3 class="card__title">MLT Ascend</h3>
+            <p class="card__desc">Management Leadership for Tomorrow's career-preparation program for undergraduates from underrepresented backgrounds.</p>
+            <p><span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">2025 · National Winner · Top 1%</p>
+            <h3 class="card__title">NCWIT Aspirations in Computing</h3>
+            <p class="card__desc">A national award recognizing women, genderqueer, and non-binary students for their aptitude and interest in computing.</p>
+            <p><span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card__eyebrow">2021–2022</p>
+            <h3 class="card__title">Camp Erio Fellow</h3>
+            <p class="card__desc"><span class="todo">[ONE-LINE DESCRIPTION OF CAMP ERIO]</span></p>
+            <p>Built and tested product features at ZillaGigs during the fellowship. <span class="todo">[WHAT I DID / GAINED]</span></p>
+          </article>
+        </div>
+
+        <!-- Fellowships gallery -->
+        <div class="gallery" data-gallery aria-label="Fellowship and scholarship photos">
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="FELLOWSHIP PHOTO 1">
+              <img src="assets/fellowships/fellowship-1.jpg" alt="[ALT: describe fellowship photo 1]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: program and event]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="FELLOWSHIP PHOTO 2">
+              <img src="assets/fellowships/fellowship-2.jpg" alt="[ALT: describe fellowship photo 2]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: program and event]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="FELLOWSHIP PHOTO 3">
+              <img src="assets/fellowships/fellowship-3.jpg" alt="[ALT: describe fellowship photo 3]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: program and event]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="FELLOWSHIP PHOTO 4">
+              <img src="assets/fellowships/fellowship-4.jpg" alt="[ALT: describe fellowship photo 4]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: program and event]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 06 GAAP (tinted) ============================ -->
+    <section class="section section--tint" id="gaap" aria-labelledby="gaap-title">
+      <div class="container">
+        <h2 class="section-title" id="gaap-title"><span class="num">06</span> GAAP</h2>
+
+        <h3 class="feature-title">International Girls' Ambition and Achievement Program</h3>
+        <!-- TODO: confirm mission wording -->
+        <p class="feature-lede">A global career-development program that connects ambitious girls with the guidance, skills, and opportunities to reach their goals.</p>
+        <p class="entry__meta">Co-Founder · May 2024–Present · Remote</p>
+
+        <ul class="stats">
+          <li><span class="stat__num">400+</span><span class="stat__label">Registered scholars</span></li>
+          <li><span class="stat__num">35+</span><span class="stat__label">Countries</span></li>
+          <!-- TODO: confirm partnership count (resume says 10+) -->
+          <li><span class="stat__num">10+</span><span class="stat__label">Nonprofit partners</span></li>
+          <li><span class="stat__num">3,000+</span><span class="stat__label">Instagram followers</span></li>
+        </ul>
+
+        <h3 class="subhead">What I built and led</h3>
+        <ul class="bullets">
+          <li>Co-founded GAAP and scaled it to 400+ registered scholars across 35+ countries.</li>
+          <li>Secured 10+ nonprofit partnerships to deliver programming and expand the program's reach.</li>
+          <li><span class="todo">[ADD: programs, systems, or teams you built and led]</span></li>
+        </ul>
+        <p>Follow GAAP on Instagram: <a href="https://www.instagram.com/weclosethegaap/">@weclosethegaap</a></p>
+
+        <!-- GAAP gallery: meeting screenshots and posters -->
+        <div class="gallery" data-gallery aria-label="GAAP photos and posters">
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="GAAP PHOTO 1">
+              <img src="assets/gaap/gaap-1.jpg" alt="[ALT: describe GAAP image 1]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: GAAP meeting or poster]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="GAAP PHOTO 2">
+              <img src="assets/gaap/gaap-2.jpg" alt="[ALT: describe GAAP image 2]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: GAAP meeting or poster]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="GAAP POSTER 1">
+              <img src="assets/gaap/gaap-3.jpg" alt="[ALT: describe GAAP image 3]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: GAAP meeting or poster]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="GAAP POSTER 2">
+              <img src="assets/gaap/gaap-4.jpg" alt="[ALT: describe GAAP image 4]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: GAAP meeting or poster]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 07 CAMPUS & INDUSTRY ============================ -->
+    <section class="section" id="campus" aria-labelledby="campus-title">
+      <div class="container">
+        <h2 class="section-title" id="campus-title"><span class="num">07</span> Campus &amp; Industry</h2>
+
+        <h3 class="subhead subhead--first">Campus &amp; leadership</h3>
+        <ul class="rows">
+          <li>
+            <span class="rows__name">Society of Women Engineers</span>
+            <span class="rows__detail">Executive Board</span>
+          </li>
+          <li>
+            <span class="rows__name">ColorStack</span>
+            <span class="rows__detail">Member</span>
+          </li>
+          <li>
+            <span class="rows__name">National Society of Black Engineers</span>
+            <span class="rows__detail">Member</span>
+          </li>
+          <li>
+            <span class="rows__name">Alpha Kappa Psi</span>
+            <span class="rows__detail">Member</span>
+          </li>
+        </ul>
+
+        <article class="entry entry--spaced">
+          <header class="entry__head">
+            <h3 class="entry__title">Civil Air Patrol, U.S. Air Force Auxiliary (CT-058) <span class="entry__role">Cadet Captain · Top 5% of 20,000+ cadets nationwide</span></h3>
+            <p class="entry__meta">Jan 2024–Present · Hartford, CT</p>
+          </header>
+          <ul class="bullets">
+            <li>Completed pilot training, including flight training in a Cessna, along with CyberPatriot and emergency rescue training.</li>
+            <li>Served on advisory councils, impacting 100+ peers.</li>
+          </ul>
+        </article>
+
+        <!-- Campus gallery -->
+        <div class="gallery" data-gallery aria-label="Campus club photos">
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="CAMPUS PHOTO 1">
+              <img src="assets/campus/campus-1.jpg" alt="[ALT: describe campus photo 1]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: club and event]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="CAMPUS PHOTO 2">
+              <img src="assets/campus/campus-2.jpg" alt="[ALT: describe campus photo 2]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: club and event]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="CAMPUS PHOTO 3">
+              <img src="assets/campus/campus-3.jpg" alt="[ALT: describe campus photo 3]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: club and event]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="CAMPUS PHOTO 4">
+              <img src="assets/campus/campus-4.jpg" alt="[ALT: describe campus photo 4]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[CAPTION: club and event]</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="subhead">Company site visits</h3>
+        <ul class="rows">
+          <li>
+            <span class="rows__name">Datadog · In-Office Event, NYC</span>
+            <span class="rows__detail">March 2026 · Selective invite</span>
+          </li>
+          <li>
+            <span class="rows__name">LinkedIn · NYC office visit</span>
+            <span class="rows__detail">May 2026 · Possibilities in Tech</span>
+          </li>
+          <li>
+            <span class="rows__name"><span class="todo">[COMPANY]</span></span>
+            <span class="rows__detail"><span class="todo">[DATE]</span></span>
+          </li>
+        </ul>
+
+        <!-- Site-visits gallery: caption each with company and what you learned -->
+        <div class="gallery" data-gallery aria-label="Company site visit photos">
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="SITE VISIT 1">
+              <img src="assets/site-visits/visit-1.jpg" alt="[ALT: Datadog in-office event, NYC]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Datadog, NYC · March 2026. [WHAT I LEARNED]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="SITE VISIT 2">
+              <img src="assets/site-visits/visit-2.jpg" alt="[ALT: LinkedIn NYC office visit]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>LinkedIn, NYC · May 2026. [WHAT I LEARNED]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="SITE VISIT 3">
+              <img src="assets/site-visits/visit-3.jpg" alt="[ALT: describe site visit photo 3]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[COMPANY], [DATE]. [WHAT I LEARNED]</figcaption>
+          </figure>
+          <!-- TODO: replace with real photo -->
+          <figure class="gallery__item">
+            <div class="ph" data-label="SITE VISIT 4">
+              <img src="assets/site-visits/visit-4.jpg" alt="[ALT: describe site visit photo 4]" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption>[COMPANY], [DATE]. [WHAT I LEARNED]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 08 AWARDS ============================ -->
+    <section class="section" id="awards" aria-labelledby="awards-title">
+      <div class="container">
+        <h2 class="section-title" id="awards-title"><span class="num">08</span> Awards</h2>
+        <ul class="awards">
+          <li><span class="awards__year">2026</span><span class="awards__name">LinkedIn Possibilities in Tech Hackathon</span><span class="awards__note">Winner</span></li>
+          <li><span class="awards__year">2026</span><span class="awards__name">Amazon Future Engineer Hackathon</span><span class="awards__note">Top 10 of 50</span></li>
+          <li><span class="awards__year">2025</span><span class="awards__name">NCWIT Aspirations in Computing</span><span class="awards__note">National Winner · Top 1%</span></li>
+          <li><span class="awards__year">2025</span><span class="awards__name">Bill &amp; Melinda Gates Scholar</span><span class="awards__note">Top 2%</span></li>
+          <li><span class="awards__year">2025</span><span class="awards__name">Amazon Future Engineer</span><span class="awards__note">Top 5%</span></li>
+          <li><span class="awards__year">2025</span><span class="awards__name">LinkedIn Possibilities in Tech Scholar</span><span class="awards__note">Top 5%</span></li>
+          <li><span class="awards__year">2025</span><span class="awards__name">CT Women of Innovation Award</span><span class="awards__note">Winner</span></li>
+          <li><span class="awards__year">2025</span><span class="awards__name">Million Women Mentors CT Next Generation Leader</span><span class="awards__note">Honoree</span></li>
+          <li><span class="awards__year">2021–</span><span class="awards__name">Genius Olympiad &amp; research symposiums</span><span class="awards__note">10+ awards</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ 09 CONTACT ============================ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-title" id="contact-title"><span class="num">09</span> Contact</h2>
+        <p class="feature-lede">Email is the best way to reach me.</p>
+        <dl class="facts facts--grid contact">
+          <dt>Email</dt>
+          <dd><a href="mailto:nse2119@columbia.edu">nse2119@columbia.edu</a></dd>
+          <dt>GitHub</dt>
+          <dd><a href="[GITHUB_URL]">[GITHUB_URL]</a></dd>
+          <dt>LinkedIn</dt>
+          <dd><a href="[LINKEDIN_URL]">[LINKEDIN_URL]</a></dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Namyanzi Edwards · Plain HTML, CSS, and JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- ============================ LIGHTBOX (shared by every gallery) ============================ -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close">×</button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photo">‹</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+      <p class="lightbox__count" aria-live="polite"></p>
+    </figure>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Next photo">›</button>
+  </dialog>
+</body>
+</html>
